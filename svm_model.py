@@ -1,15 +1,15 @@
-from sklearn import svm
-from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import accuracy_score
 import pickle
 import numpy as np
 import cv2
 import os
 import datetime
 import mediapipe as mp
+
 from mediapipe.framework.formats import landmark_pb2
 from mediapipe import solutions
-
+from sklearn import svm
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import accuracy_score
 
 class SVMModel:
     

@@ -3,10 +3,11 @@ import mediapipe as mp
 import numpy as np
 import cv2
 import datetime
+import torch.nn as nn
+
 from mediapipe.framework.formats import landmark_pb2
 from mediapipe import solutions
 from torchvision import models
-import torch.nn as nn
 
 MARGIN = 10 
 FONT_SIZE = 1

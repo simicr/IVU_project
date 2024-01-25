@@ -3,3 +3,7 @@
 awesome_model.pkl
 archive.zip
 hand_landmarker.task
+train
+test
+val
+data.json
