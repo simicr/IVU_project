@@ -1,5 +1,7 @@
-/data/
-/IVU-experiments/
+data
+archive
+archive.zip
+IVU-experiments.zip
 awesome_model.pkl
 archive.zip
 hand_landmarker.task

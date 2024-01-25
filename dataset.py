@@ -43,7 +43,6 @@ class DataManager():
             shutil.rmtree(os.path.join(self.cwd, 'train'))
             shutil.rmtree(os.path.join(self.cwd, 'val'))
             shutil.rmtree(os.path.join(self.cwd, 'test'))
-            os.remove('data.json')
         except OSError as e:
             print(f'Error: {e}')
     
@@ -113,7 +112,9 @@ class DataManager():
             self.data['train'] = train_files
             self.data['val'] = val_files
             self.data['test'] = test_files
-            with open('data.json', 'w') as fp:
+
+            file_path = os.path.join(self.cwd, 'data.json')
+            with open(file_path, 'w') as fp:
                 json.dump(self.data, fp)
 
     def recreate_json(self):
@@ -130,5 +131,5 @@ class DataManager():
                 shutil.copy(start, end)
 
 dm = DataManager()
-dm.make_splits(make_data=False, export=True, data_ratio=0.3)  
+dm.make_splits(make_data=True, export=True, data_ratio=0.3)  
 
